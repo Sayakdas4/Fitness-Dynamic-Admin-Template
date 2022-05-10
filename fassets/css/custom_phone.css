@@ -1,0 +1,241 @@
+.phone-outer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px;
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+
+    /* background: url(../images/phone-full.png) no-repeat;
+    background-size: 100% auto; */
+}
+.phone-outer .phone-img{
+    width: 39%;
+    height: auto;
+    display: inline-block;
+    position: relative;
+}
+.phone-outer .phone-img .img-full{
+    width: 100%;
+    display: inline-block;
+}
+.phone-outer .phone-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.phone-outer .phone-info{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1D1D1F;
+    white-space: nowrap;
+    max-width: auto;
+}
+.phone-outer .phone-info.text-right:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border-top: 2px dashed #A1A2A6;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.phone-outer .phone-info.text-right:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1D1D1F;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.phone-outer .phone-info.text-left:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border-top: 2px dashed #A1A2A6;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.phone-outer .phone-info.text-left:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1D1D1F;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.phone-outer .phone-info.info-one{
+    top: 33%;
+    right: 100%;
+    padding-right: 100px;
+}
+.phone-outer .phone-info.info-two{
+    top: 20%;
+    left: 100%;
+    padding-left: 100px;
+}
+.phone-outer .phone-info.info-three{
+    top: 60%;
+    left: 100%;
+    padding-left: 100px;
+}
+.phone-outer .phone-info.info-four{
+    top: 65%;
+    right: 100%;
+    padding-right: 100px;
+}
+
+
+.text-right{
+    text-align: right !important;
+}
+.text-left{
+    text-align: left !important;
+}
+
+@media (max-width: 768px) {
+    /*.phone-outer {
+        -webkit-box-pack: left!important;
+        -ms-flex-pack: left!important;
+        justify-content: left!important;
+    }
+    .phone-outer .phone-img {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center!important;
+        -ms-flex-align: center!important;
+        align-items: center!important;
+    }
+    .phone-outer .phone-img .img-full{
+        width: 45%;
+        display: block;
+        float: left;
+        order: 1;
+    }
+    .phone-outer .phone-img .all-info{
+        width: 55%;
+        display: block;
+        float: left;
+        position: relative;
+        box-sizing: border-box;
+        order: 2;
+    }
+    .phone-outer .phone-info {
+        width: calc(100% - 20px);
+        height: auto;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1D1D1F;
+        white-space: normal;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        padding: 5px 5px 5px 8px !important;
+        text-align: left !important;
+        margin: 0 0 10px 20px !important;
+
+        box-sizing: border-box;
+        border: 1px dashed #A1A2A6;
+        border-radius: 8px;
+    }
+    .phone-outer .phone-info:last-child{
+        margin-bottom: 0px !important;
+    }
+    .phone-outer .phone-info br{
+        display: none !important;
+    }
+    .phone-outer .phone-info:before{
+        width: 20px !important;
+        right: 100% !important;
+        left: auto !important;
+    }
+    .phone-outer .phone-info:after{
+        right: 100% !important;
+        left: auto !important;
+        margin-right: -5px !important;
+    }*/
+
+.phone-outer {
+    -webkit-box-pack: left!important;
+    -ms-flex-pack: left!important;
+    justify-content: left!important;
+}
+.phone-outer .phone-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+/*.phone-outer .phone-img .img-full {
+    width: 100%;
+    display: block;
+    float: left;
+    order: 1;
+    max-height: 160px;
+    overflow: hidden;
+}*/
+.phone-outer .phone-img .all-info {
+    width: 100%;
+    display: none !important;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    order: 2;
+    margin-top: 15px;
+}
+.phone-outer .phone-info {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    position: static;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    text-align: left !important;
+    padding: 0px !important;
+    margin: 10px 0 !important;
+    white-space: normal !important;
+}
+.phone-outer .phone-info br{
+    display: none;
+}
+.phone-outer .phone-info.text-left:after,
+.phone-outer .phone-info.text-left:before,
+.phone-outer .phone-info.text-right:before,
+.phone-outer .phone-info.text-right:after{
+    display: none !important;
+}
+    
+}

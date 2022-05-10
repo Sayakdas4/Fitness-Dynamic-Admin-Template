@@ -1,0 +1,245 @@
+<?php $this->load->view('fincludes/header'); ?>
+      <!-- ======= Body Container Start ======= -->
+    <section class="bg-grey padtop-250">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-2">
+                    <nav class="sidebar">
+                        <div class="sidebar-content">
+                            <ul class="list-group sidebar-nav">
+                                <li class="sidebar-item">
+                                    <a href="javascript:;">Account</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="javascript:;" class="active">Orders</a>
+                                </li>
+                                <!-- <li class="sidebar-item">
+                                    <a href="javascript:;">Address</a>
+                                </li> -->
+                                <li class="sidebar-item">
+                                  <?php if($this->session->userdata('user_data')){ ?>
+                                    <a href="<?php echo base_url() ?>google_login/signout">Logout</a>
+                                  <?php } else{ ?>
+                                    <a href="<?php echo base_url() ?>signout">Logout</a>
+                                  <?php } ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Account -->
+                <div class="col-sm-12 col-md-10" id="account">
+                    <div class="right-pan">
+                        <div class="welcome-section">
+                            Welcome<span>, 
+                                <?php
+                                    if($this->session->userdata('user_data')){
+                                        $user_data = $this->session->userdata('user_data');
+                                        echo $user_data['name'];
+                                    } else {
+                                        echo $user_data->name;
+                                    }
+                                ?>
+                            </span>
+                        </div>
+                        <div class="account-info">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card border-0 border-rounded-7">
+                                        <div class="card-body dahborad-card-body">
+                                            <div class="info-heading border-bottom">
+                                                Your Account Information
+                                            </div>
+                                            <div>
+                                                <ul class="list-inline account-info">
+                                                    <span class="d-block">
+                                                        <li class="list-inline-item">Name:</li>
+                                                        <li class="list-inline-item">
+                                                            <?php
+                                                                if($this->session->userdata('user_data')){
+                                                                    $user_data = $this->session->userdata('user_data');
+                                                                    echo $user_data['name'];
+                                                                } else {
+                                                                    echo $user_data->name;
+                                                                }
+                                                            ?>
+                                                        </li>
+                                                    </span>
+                                                    <span class="d-block">
+                                                        <li class="list-inline-item">Email:</li>
+                                                        <li class="list-inline-item">
+                                                            <?php
+                                                                if($this->session->userdata('user_data')){
+                                                                    $user_data = $this->session->userdata('user_data');
+                                                                    echo $user_data['email'];
+                                                                } else {
+                                                                    echo $user_data->email;
+                                                                }
+                                                            ?>
+                                                        </li>
+                                                    </span>
+                                                    <span class="d-block">
+                                                        <li class="list-inline-item">Mobile:</li>
+                                                        <li class="list-inline-item">
+                                                            <?php
+                                                                if($this->session->userdata('user_data')){
+                                                                    $user_data = $this->session->userdata('user_data');
+                                                                    echo $user_data['phone'];
+                                                                } else {
+                                                                    echo $user_data->phone;
+                                                                }
+                                                            ?>
+                                                        </li>
+                                                    </span>
+                                                    <!-- <span class="d-block">
+                                                        <li class="list-inline-item">Address:</li>
+                                                        <li class="list-inline-item">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Kolkata-700064</li>
+                                                    </span> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order -->
+                <div class="col-sm-12 col-md-10" id="order">
+                    <div class="right-pan">
+                        <div class="welcome-section">
+                            Welcome<span>,
+                                <?php
+                                    if($this->session->userdata('user_data')){
+                                      $user_data = $this->session->userdata('user_data');
+                                      echo $user_data['name'];
+                                    } else {
+                                      echo $user_data->name;
+                                    }
+                                ?>
+                            </span>
+                        </div>
+                        <div class="d-md-flex justify-content-md-evenly justify-content-lg-between">
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>Order</p>
+                                <p class="order-info">TBC</p>
+                            </div>
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>Start Date</p>
+                                <p class="blue-text">11th Feb 2022</p>
+                            </div>
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>End Date</p>
+                                <p class="blue-text">11th Feb 2023</p>
+                            </div>
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>Status</p>
+                                <p class="green-text">Active</p>
+                            </div>
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>Total</p>
+                                <p class="order-info">TBC</p>
+                            </div>
+                            <div class="bg-white border-rounded-7 small-box">
+                                <p>Actions</p>
+                                <p class="order-info">TBC</p>
+                            </div>
+                        </div>
+                        <div class="card-section">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card border-0 border-rounded-7  dahborad-card">
+                                        <div class="card-body dahborad-card-body">
+                                            <div class="icon-section mx-auto margin-bot-25">
+                                                <img src="<?php echo base_url() ?>fassets/images/refresh-icon.png" alt="TFC" class="img-fluid">
+                                            </div>
+                                            <p class="box-head mb-0">Renew</p>
+                                            <p class="box-description mb-0">
+                                                Extend your current plan and<br> unlock the incentive to<br> keep making progress
+                                            </p>
+                                            <div class="discount-text">
+                                                <p class="discount-title">
+                                                    Flat Discount
+                                                </p>
+                                                <p class="discount-amount">₹ 1000 /-</p>
+                                                <p class="refer-txt">
+                                                    <a href="javascript:;" class="text-decoration-none font-weight-400">Refer now 
+                                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.31327 0.338176C0.730962 -0.112725 1.40818 -0.112725 1.82587 0.338176L7.53024 6.49607C7.94793 6.94697 7.94793 7.67803 7.53024 8.12893L1.82587 14.2868C1.40818 14.7377 0.730962 14.7377 0.31327 14.2868C-0.104423 13.8359 -0.104423 13.1049 0.31327 12.654L5.26134 7.3125L0.31327 1.97103C-0.104423 1.52013 -0.104423 0.789077 0.31327 0.338176Z" fill="#4B97F7"/>
+                                                        </svg>
+                                                    </a>
+                                                </p>
+                                                <small class="valid-text">*Valid till the last date of your current package</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card border-0 border-rounded-7 dahborad-card">
+                                        <div class="card-body dahborad-card-body">
+                                            <div class="icon-section mx-auto margin-bot-25">
+                                                <img src="<?php echo base_url() ?>fassets/images/refer-icon.png" alt="TFC" class="img-fluid">
+                                            </div>
+                                            <p class="box-head mb-0">Refer</p>
+                                            <p class="box-description mb-0">
+                                                Invite a friend for coaching and <br>they’ll get ₹1000 off on their<br> enrollment. Additionally, you’ll get
+                                            </p>
+                                            <div class="discount-text">
+                                                <p class="discount-title">
+                                                    Duration Extended
+                                                </p>
+                                                <p class="discount-amount">+ 2 weeks free</p>
+                                                <p class="refer-txt">
+                                                    <a href="javascript:;" class="text-decoration-none font-weight-400">Refer now 
+                                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.31327 0.338176C0.730962 -0.112725 1.40818 -0.112725 1.82587 0.338176L7.53024 6.49607C7.94793 6.94697 7.94793 7.67803 7.53024 8.12893L1.82587 14.2868C1.40818 14.7377 0.730962 14.7377 0.31327 14.2868C-0.104423 13.8359 -0.104423 13.1049 0.31327 12.654L5.26134 7.3125L0.31327 1.97103C-0.104423 1.52013 -0.104423 0.789077 0.31327 0.338176Z" fill="#4B97F7"/>
+                                                        </svg>
+                                                    </a>
+                                                </p>
+                                                <small class="valid-text">*Valid till the last date of your current package<br>* Referral valid only on coaching packages</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card border-0 border-rounded-7 dahborad-card">
+                                        <div class="card-body dahborad-card-body">
+                                            <div class="icon-section mx-auto margin-bot-25">
+                                                <img src="<?php echo base_url() ?>fassets/images/gift-icon.png" alt="TFC" class="img-fluid">
+                                            </div>
+                                            <p class="box-head mb-0">Gift</p>
+                                            <p class="box-description mb-0">
+                                                Surprise a loved one with our 10<br> day kick-starter package & help them get a step closer to fitness.
+                                            </p>
+                                            <div class="discount-text">
+                                                <p class="discount-title">
+                                                    Satisfaction Guaranteed
+                                                </p>
+                                                <p class="discount-amount">100%</p>
+                                                <p class="refer-txt">
+                                                    <a href="javascript:;" class="text-decoration-none font-weight-400">Refer now 
+                                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.31327 0.338176C0.730962 -0.112725 1.40818 -0.112725 1.82587 0.338176L7.53024 6.49607C7.94793 6.94697 7.94793 7.67803 7.53024 8.12893L1.82587 14.2868C1.40818 14.7377 0.730962 14.7377 0.31327 14.2868C-0.104423 13.8359 -0.104423 13.1049 0.31327 12.654L5.26134 7.3125L0.31327 1.97103C-0.104423 1.52013 -0.104423 0.789077 0.31327 0.338176Z" fill="#4B97F7"/>
+                                                        </svg>
+                                                    </a>
+                                                </p>
+                                                <small class="valid-text">*Valid till the last date of your current package<br>* Referral valid only on kick-starter packages</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </section>
+      <!-- ======= Body Container End ======= -->
+<?php $this->load->view('fincludes/footer'); ?>
+<script type="text/javascript">
+    
+</script>
